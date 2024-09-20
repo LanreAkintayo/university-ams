@@ -77,8 +77,8 @@ function Main() {
             </div>
           </div>
         </div>
-        <div className="flex w-full gap-5 mt-3.5">
-          <div className="p-1 w-4/12 box box--stacked">
+        <div className="flex flex-col lg:flex-row w-full gap-5 mt-3.5">
+          <div className="p-1 lg:w-4/12 box box--stacked">
             <div className="-mx-1 overflow-hidden h-[244px] [&_.tns-nav]:bottom-auto [&_.tns-nav]:w-auto [&_.tns-nav]:ml-5 [&_.tns-nav]:mt-5 [&_.tns-nav_button]:w-2 [&_.tns-nav_button]:h-2 [&_.tns-nav_button.tns-nav-active]:w-5 [&_.tns-nav_button]:mx-0.5 [&_.tns-nav_button]:bg-white/40 [&_.tns-nav_button.tns-nav-active]:bg-white/70">
               <TinySlider options={{ mode: "gallery", nav: true }}>
                 <div className="px-1">
@@ -159,7 +159,7 @@ function Main() {
               </TinySlider>
             </div>
           </div>
-          <div className="flex w-4/12 flex-col p-5 box box--stacked">
+          <div className="flex lg:w-4/12 flex-col p-5 box box--stacked">
             <Menu className="absolute top-0 right-0 mt-5 mr-5">
               <Menu.Button className="w-5 h-5 text-slate-500">
                 <Lucide
@@ -216,7 +216,7 @@ function Main() {
               </div>
             </div>
           </div>
-          <div className="flex w-4/12 flex-col p-5 box box--stacked">
+          <div className="flex lg:w-4/12 flex-col p-5 box box--stacked">
             <Menu className="absolute top-0 right-0 mt-5 mr-5">
               <Menu.Button className="w-5 h-5 text-slate-500">
                 <Lucide
