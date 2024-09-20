@@ -36,7 +36,7 @@ function Main() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/users/add-user",
+        `${import.meta.env.VITE_PINATA_BACKEND_URL}/api/users/add-user`,
         newProduct
       );
       alert("Admin has signed up successfully");

@@ -26,7 +26,7 @@ function Main() {
   console.log("All Products: ", allProducts)
    const getAllProducts = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/products/all-products");
+      const response = await axios.get(`${import.meta.env.VITE_PINATA_BACKEND_URL}/api/products/all-products`);
       console.log("Reponse.data: ", response.data)
       return await Promise.all(response.data)
     } catch (error) {

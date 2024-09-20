@@ -131,7 +131,7 @@ function Main() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/products/add-product",
+        `${import.meta.env.VITE_PINATA_BACKEND_URL}/api/products/add-product`,
         newProduct
       );
       alert("Product has been added successfully");

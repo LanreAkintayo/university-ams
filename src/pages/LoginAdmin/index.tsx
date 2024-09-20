@@ -38,7 +38,7 @@ function Main() {
 
    const getAllUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/users/all-users");
+      const response = await axios.get(`${import.meta.env.VITE_PINATA_BACKEND_URL}/api/users/all-users`);
       console.log("Reponse.data: ", response.data)
       return await Promise.all(response.data)
     } catch (error) {
