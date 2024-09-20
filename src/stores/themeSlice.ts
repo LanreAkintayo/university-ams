@@ -13,50 +13,50 @@ import Viper from "../themes/Viper";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 export const themes = [
-  // {
-  //   name: "echo",
-  //   component: Echo,
-  // },
-  // {
-  //   name: "hurricane",
-  //   component: Hurricane,
-  // },
-  // {
-  //   name: "ravage",
-  //   component: Ravage,
-  // },
-  // {
-  //   name: "hook",
-  //   component: Hook,
-  // },
-  // {
-  //   name: "razor",
-  //   component: Razor,
-  // },
-  // {
-  //   name: "havoc",
-  //   component: Havoc,
-  // },
+  {
+    name: "echo",
+    component: Echo,
+  },
+  {
+    name: "hurricane",
+    component: Hurricane,
+  },
+  {
+    name: "ravage",
+    component: Ravage,
+  },
+  {
+    name: "hook",
+    component: Hook,
+  },
+  {
+    name: "razor",
+    component: Razor,
+  },
+  {
+    name: "havoc",
+    component: Havoc,
+  },
   {
     name: "dagger",
     component: Dagger,
   },
-  // {
-  //   name: "shuriken",
-  //   component: Shuriken,
-  // },
-  // {
-  //   name: "raze",
-  //   component: Raze,
-  // },
-  // {
-  //   name: "exort",
-  //   component: Exort,
-  // },
-  // {
-  //   name: "viper",
-  //   component: Viper,
-  // },
+  {
+    name: "shuriken",
+    component: Shuriken,
+  },
+  {
+    name: "raze",
+    component: Raze,
+  },
+  {
+    name: "exort",
+    component: Exort,
+  },
+  {
+    name: "viper",
+    component: Viper,
+  },
 ] as const;
 
 export type Themes = (typeof themes)[number];
