@@ -1,0 +1,863 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_investorAddress",
+        "type": "address"
+      }
+    ],
+    "name": "getAllInvestments",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "projectAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "investor",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes16",
+            "name": "investmentId",
+            "type": "bytes16"
+          },
+          {
+            "internalType": "uint256",
+            "name": "investedAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startDay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "investingDays",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "reward",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "stablePrincipal",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "insuranceFee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "stableReward",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isActive",
+            "type": "bool"
+          },
+          {
+            "internalType": "enum InvestmentStatus",
+            "name": "status",
+            "type": "uint8"
+          }
+        ],
+        "internalType": "struct Investment[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      }
+    ],
+    "name": "getAllInvestors",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getAllProjects",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      }
+    ],
+    "name": "getDisapprovedInvestments",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "projectAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "investor",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes16",
+            "name": "investmentId",
+            "type": "bytes16"
+          },
+          {
+            "internalType": "uint256",
+            "name": "investedAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startDay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "investingDays",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "reward",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "stablePrincipal",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "insuranceFee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "stableReward",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isActive",
+            "type": "bool"
+          },
+          {
+            "internalType": "enum InvestmentStatus",
+            "name": "status",
+            "type": "uint8"
+          }
+        ],
+        "internalType": "struct Investment[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getDisapprovedProjects",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_investorAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes16",
+        "name": "_investmentId",
+        "type": "bytes16"
+      }
+    ],
+    "name": "getInvestment",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "projectAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "investor",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes16",
+            "name": "investmentId",
+            "type": "bytes16"
+          },
+          {
+            "internalType": "uint256",
+            "name": "investedAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startDay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "investingDays",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "reward",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "stablePrincipal",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "insuranceFee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "stableReward",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isActive",
+            "type": "bool"
+          },
+          {
+            "internalType": "enum InvestmentStatus",
+            "name": "status",
+            "type": "uint8"
+          }
+        ],
+        "internalType": "struct Investment",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_investorAddress",
+        "type": "address"
+      }
+    ],
+    "name": "getInvestmentCount",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_investorAddress",
+        "type": "address"
+      }
+    ],
+    "name": "getInvestorTotalInvested",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "liqProvider",
+        "type": "address"
+      }
+    ],
+    "name": "getLiquidityProvider",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "providerAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "stableAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalClaimed",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalReward",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct LiquidityProvider",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      }
+    ],
+    "name": "getPendingInvestments",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "projectAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "investor",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes16",
+            "name": "investmentId",
+            "type": "bytes16"
+          },
+          {
+            "internalType": "uint256",
+            "name": "investedAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startDay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "investingDays",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "reward",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "stablePrincipal",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "insuranceFee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "stableReward",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isActive",
+            "type": "bool"
+          },
+          {
+            "internalType": "enum InvestmentStatus",
+            "name": "status",
+            "type": "uint8"
+          }
+        ],
+        "internalType": "struct Investment[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getPendingProjects",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      }
+    ],
+    "name": "getProjectInfo",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "enum Status",
+            "name": "status",
+            "type": "uint8"
+          },
+          {
+            "internalType": "string",
+            "name": "logo",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "discordHandle",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "twitterHandle",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "telegramHandle",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "message",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "websiteUrl",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "timeCreated",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ProjectInfo",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      }
+    ],
+    "name": "getProjectLiquidityProviders",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "providerAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "stableAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalClaimed",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalReward",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct LiquidityProvider[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      }
+    ],
+    "name": "getProjectMetrics",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "totalInvested",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalAccumulatedReward",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalAccumulatedStables",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalRewardIssuedOut",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalLiquidityFee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "liquidityPercentage",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "insuranceFeePercentage",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "penaltyPercentage",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "investmentReserveBalance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "stableReserveBalance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minRewardDistribution",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Metrics",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      }
+    ],
+    "name": "getProjectPlatformAddresses",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "creator",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "treasury",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "router",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "tokenAddress",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct PlatformAddresses",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getProtocolDetails",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "wbnb",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "stableTokenAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "flexvisTreasury",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "creationFee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "taxPercentage",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "noOfParticipants",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ProtocolDetails",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      }
+    ],
+    "name": "getRewardDurations",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      }
+    ],
+    "name": "getRewardPercentages",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      }
+    ],
+    "name": "getTokenToUsdPath",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_liqProvider",
+        "type": "address"
+      }
+    ],
+    "name": "getUndistributedReward",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "totalReward",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

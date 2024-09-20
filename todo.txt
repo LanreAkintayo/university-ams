@@ -1,0 +1,9 @@
+1. Valid the createForm page ----> Done
+2. Validate the sponsor's page
+3. Redesign the investment page
+4. Show modal immediately an investment is made
+5. Show modal immediately a project is made  ----> Done
+6. A section of the Accepted Pools (For now, we support only pancakeswapV2)   ---> Done
+7. The admin should be responsible for adding the tokenToUsdPath to calculate price  ---> Done
+8. In the sponsor's page, redesign the sponsor's modal
+

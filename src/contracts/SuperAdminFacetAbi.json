@@ -1,0 +1,271 @@
+[
+  {
+    "inputs": [],
+    "name": "AmountIsLesserThanZero",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "AmountNotChanged",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "EmptyArray",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidAmount",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidPercentageValue",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidState",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidThresholdPercentage",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidTokenToUsdPath",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OnlyCreator",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OnlyOwnerCanCall",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "PercentageNotChanged",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ProjectNotFound",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "StatusNotChanged",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "UnequalLength",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address[]",
+        "name": "whitelistedAddresses",
+        "type": "address[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256[]",
+        "name": "fees",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "CreationFeeSet",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "reserveBalance",
+        "type": "uint256"
+      }
+    ],
+    "name": "InvestmentReserveBalanceAddedTo",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "investmentReserveBalance",
+        "type": "uint256"
+      }
+    ],
+    "name": "InvestmentReserveBalanceSubtractedFrom",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "maxAmount",
+        "type": "uint256"
+      }
+    ],
+    "name": "MaxAmountSet",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "minAmount",
+        "type": "uint256"
+      }
+    ],
+    "name": "MinAmountSet",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "_creationFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "OverallCreationFeeSet",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "enum Status",
+        "name": "status",
+        "type": "uint8"
+      }
+    ],
+    "name": "PauseSet",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256[]",
+        "name": "rewardPercentages",
+        "type": "uint256[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256[]",
+        "name": "rewardDurations",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "RewardDurationsAndPercentagesSet",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "newTaxPercentage",
+        "type": "uint256"
+      }
+    ],
+    "name": "TaxPercentageSet",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "thresholdPercentage",
+        "type": "uint256"
+      }
+    ],
+    "name": "ThresholdPercentageSet",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address[]",
+        "name": "path",
+        "type": "address[]"
+      }
+    ],
+    "name": "TokenToUsdPathSet",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address[]",
+        "name": "whitelistedAddresses",
+        "type": "address[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "fees",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "setCreationFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_creationFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "setOverallCreationFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "newTaxPercentage",
+        "type": "uint256"
+      }
+    ],
+    "name": "setTaxPercentage",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

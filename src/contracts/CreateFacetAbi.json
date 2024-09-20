@@ -1,0 +1,878 @@
+[
+  {
+    "inputs": [],
+    "name": "AmountAboveMax",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "AmountBelowMin",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "EmptyArray",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "EmptyString",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "IndexOutOfBounds",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InsufficientBalance",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InsufficientInsuranceFee",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InsufficientPlatformTokenBalance",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidAddress",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidDescription",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidDuration",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidValue",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvestmentAlreadyApproved",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvestmentAlreadyDisapproved",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvestmentNotActive",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvestmentNotApproved",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "LargeInsuranceFeeMargin",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "NoInvestmentFound",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OnlyCreator",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OnlyOwnerCanCall",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ProjectHasBeenCreated",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ProjectNotFound",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ProjectNotPending",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ProjectStillPending",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ReserveExceeded",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "UnequalLength",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "bytes16",
+        "name": "_investmentId",
+        "type": "bytes16"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "investmentOwner",
+        "type": "address"
+      }
+    ],
+    "name": "ApprovedInvestment",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "bytes16",
+        "name": "_investmentId",
+        "type": "bytes16"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "_investmentOwner",
+        "type": "address"
+      }
+    ],
+    "name": "DisapprovedInvestment",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "creator",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "contractBalance",
+        "type": "uint256"
+      }
+    ],
+    "name": "EmergencyWithdraw",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes16",
+        "name": "investmentId",
+        "type": "bytes16"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "investor",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "projectId",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "startDay",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "investingDays",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "totalAccumulatedReward",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "totalAccumulatedStables",
+        "type": "uint256"
+      }
+    ],
+    "name": "InvestmentCreated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "investor",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes16",
+        "name": "investmentId",
+        "type": "bytes16"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "projectId",
+        "type": "address"
+      }
+    ],
+    "name": "InvestmentEnded",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes16",
+        "name": "investmentId",
+        "type": "bytes16"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "investor",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "projectId",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "startDay",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "investingDays",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "totalAccumulatedReward",
+        "type": "uint256"
+      }
+    ],
+    "name": "PendingInvestmentCreated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "projectId",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address[]",
+        "name": "pendingProjects",
+        "type": "address[]"
+      }
+    ],
+    "name": "ProjectApproved",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "creator",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "projectId",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "treasury",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "router",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "stableTokenAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "wbnb",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "insuranceFeePercentage",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "liquidityPercentage",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "penaltyPercentage",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "minAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "maxAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "projectLogo",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "discordHandle",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "twitterHandle",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "telegramHandle",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "websiteUrl",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "description",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256[]",
+        "name": "rewardPercentages",
+        "type": "uint256[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256[]",
+        "name": "rewardDurations",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "ProjectCreated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "projectId",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address[]",
+        "name": "pendingProjects",
+        "type": "address[]"
+      }
+    ],
+    "name": "ProjectDisapproved",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes16",
+        "name": "_investmentId",
+        "type": "bytes16"
+      },
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_investmentOwner",
+        "type": "address"
+      }
+    ],
+    "name": "approveInvestment",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      },
+      {
+        "internalType": "address[]",
+        "name": "_tokenToUsd",
+        "type": "address[]"
+      }
+    ],
+    "name": "approveProject",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_duration",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_insuranceFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "createInsuredInvestment",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_minAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_maxAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_insuranceFeePercentage",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_liquidityPercentage",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_penaltyPercentage",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_tokenAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_treasury",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_router",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_stableTokenAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_wbnb",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "_projectLogo",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_discordHandle",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_twitterHandle",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_telegramHandle",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_websiteUrl",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_description",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "_rewardPercentages",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "_rewardDurations",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "createProject",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes16",
+        "name": "_investmentId",
+        "type": "bytes16"
+      },
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_investmentOwner",
+        "type": "address"
+      }
+    ],
+    "name": "disapproveInvestment",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "shouldReceive",
+        "type": "bool"
+      },
+      {
+        "internalType": "string",
+        "name": "reason",
+        "type": "string"
+      }
+    ],
+    "name": "disapproveProject",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      }
+    ],
+    "name": "emergencyWithdraw",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes16",
+        "name": "_investmentId",
+        "type": "bytes16"
+      },
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      }
+    ],
+    "name": "endInvestment",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes16",
+        "name": "_investmentId",
+        "type": "bytes16"
+      },
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_investor",
+        "type": "address"
+      }
+    ],
+    "name": "getAccumulatedReward",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "accumulatedReward",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_duration",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "getInvestmentReward",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "reward",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_stableTokenAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_flexvisTreasury",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_creationFee",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_taxPercentage",
+        "type": "uint256"
+      }
+    ],
+    "name": "initializeFacet",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_duration",
+        "type": "uint256"
+      }
+    ],
+    "name": "isValidDuration",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "isValid",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectId",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "tokenToUsd",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
