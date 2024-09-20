@@ -32,7 +32,7 @@ function Main() {
   console.log("last Email: ", lastEmail)
 
     const checkIfUserExists = () => {
-      const userExists = allUsers.some((user: any) => user.email === email && user.password === password);
+      const userExists = allUsers ? allUsers.some((user: any) => user.email === email && user.password === password): false;
       return userExists; // Returns true if a user is found, otherwise false
     }
 
