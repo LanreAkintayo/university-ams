@@ -137,7 +137,7 @@ function Main() {
               {/* BEGIN: Search */}
               <div
                 className="relative justify-center flex-1 hidden xl:flex"
-                onClick={() => setQuickSearch(true)}
+                onClick={() => setQuickSearch(false)}
               >
                 <div className="bg-slate-50 border w-[350px] flex items-center py-2 px-3.5 rounded-[0.5rem] text-slate-400 cursor-pointer hover:bg-slate-100 transition-colors">
                   <Lucide icon="Search" className="w-[18px] h-[18px]" />
