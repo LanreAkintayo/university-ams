@@ -2,9 +2,6 @@ import dayjs from "dayjs";
 import duration from "dayjs/plugin/duration";
 import { parseColor } from "tailwindcss/lib/util/color";
 
-import { routerAbi } from "../contracts";
-
-
 dayjs.extend(duration);
 
 type AnyObject = {
@@ -39,13 +36,7 @@ export const toMilliseconds = (time: number): number => {
 export const toDp = (value: number, dec: number) => {
   return value.toFixed(dec);
 };
-export const toWei = (value: number | string): string => {
-  return ethers.parseEther(value.toString()).toString();
-};
 
-export const fromWei = (amount: bigint | number | string): string => {
-  return ethers.formatEther(amount.toString());
-};
 export const percent = (percentage: bigint, amount: bigint): bigint => {
   // return (percentage * Number(amount)) / 100;
   return (amount * percentage) / BigInt(100);
@@ -78,20 +69,6 @@ export const inDollarFormat = (value: number | bigint) => {
   return dollarUSLocale.format(value);
 };
 
-export const convertTokenToUsd = async (
-  routerAddress: string,
-  tokenAmount: bigint,
-  tokenPath: string[]
-) => {
-  const amounts = (await readContract({
-    address: routerAddress as `0x${string}`,
-    abi: routerAbi,
-    functionName: "getAmountsOut",
-    args: [tokenAmount, tokenPath],
-  })) as bigint[];
-
-  return amounts[amounts.length - 1];
-};
 
 export const getTimeUnitAndValue = (timeInSeconds: number) => {
   const secondsPerMinute = 60;

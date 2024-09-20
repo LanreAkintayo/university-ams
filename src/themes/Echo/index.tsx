@@ -86,10 +86,6 @@ function Main() {
     }
   };
 
-  const insurance = useSelector((state: RootState) => state.insurance);
-  const { allProjects } = insurance;
-
-
   return (
     <div
       className={clsx([

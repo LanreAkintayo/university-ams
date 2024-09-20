@@ -1,14 +1,4 @@
 import { useRoutes } from "react-router-dom";
-import Status from "../pages/Status";
-import CreateProject from "../pages/CreateProject";
-import CreateNewProject from "../pages/CreateNewProject";
-import Home from "../pages/Home";
-import Sponsor from "../pages/Sponsor";
-import Project from "../pages/Project";
-import Investments from "../pages/Investments";
-import SuperAdmin from "../pages/SuperAdmin";
-import Admin from "../pages/Admin";
-import Claim from "../pages/Claim"
 import Ipfs from "../pages/Ipfs"
 import DashboardOverview1 from "../pages/DashboardOverview1";
 import DashboardOverview2 from "../pages/DashboardOverview2";
@@ -100,50 +90,7 @@ function Router() {
           path: "/dashboard",
           element: <DashboardOverview1 />,
         },
-        // {
-        //   path: "status",
-        //   element: <Status />,
-        // },
-        {
-          path: "create/:owner/:uniqueId",
-          element: <CreateProject />,
-        },
-        // {
-        //   path: "create/:owner",
-        //   element: <CreateProject />,
-        // },
-        {
-          path: "create_new/",
-          element: <CreateNewProject />,
-        },
-        {
-          path: "home",
-          element: <Home />,
-        },
-        // {
-        //   path: "sponsor",
-        //   element: <Sponsor />,
-        // },
-        // {
-        //   path: "project/:slug",
-        //   element: <Project />,
-        // },
-        // {
-        //   path: "investments/:slug",
-        //   element: <Investments />,
-        // },
-        // {
-        //   path: "superadmin",
-        //   element: <SuperAdmin />,
-        // },
-        // {
-        //   path: "admin/:tokenAddress",
-        //   element: <Admin/>,
-        // },
-        // {
-        //   path: "claim/:tokenAddress",
-        //   element: <Claim/>,
-        // },
+    
         {
           path: "ipfs/",
           element: <Ipfs/>,

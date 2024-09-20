@@ -5,9 +5,7 @@ import {sideMenuUserSlice, sideMenuSlice} from "./sideMenuSlice";
 import themeReducer from "./themeSlice";
 import compactMenuReducer from "./compactMenuSlice";
 import pageLoaderReducer from "./pageLoaderSlice";
-import projectReducer from "./projectSlice";
-import walletReducer from "./walletSlice"
-import insuranceReducer from "./insuranceSlice"
+
 
 export const store = configureStore({
   reducer: {
@@ -18,10 +16,6 @@ export const store = configureStore({
     theme: themeReducer,
     compactMenu: compactMenuReducer,
     pageLoader: pageLoaderReducer,
-    project: projectReducer,
-    wallet: walletReducer,
-    insurance: insuranceReducer
-
   },
 });
 

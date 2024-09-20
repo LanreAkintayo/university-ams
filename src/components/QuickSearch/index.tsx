@@ -8,11 +8,7 @@ import { Dialog as HeadlessDialog, Transition } from "@headlessui/react";
 import { Fragment, useState, useEffect } from "react";
 import _ from "lodash";
 import { RootState } from "../../stores/store";
-import { readContract, multicall } from "@wagmi/core";
 import { useSelector } from "react-redux";
-import { erc20ABI } from "wagmi";
-import { SUPPORTED_CHAIN_ID } from "../../contracts";
-import { getProjectInfo, getProjectMetrics } from "../../stores/insuranceSlice";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import {
@@ -52,7 +48,6 @@ function Main(props: MainProps) {
   const [detailedProjects, setDetailedProjects] = useState<DetailedProject[]>(
     []
   );
-  const { allProjects } = useSelector((state: RootState) => state.insurance);
   const [loadedProjects, setLoadedProjects] =
     useState<DetailedProject[]>(detailedProjects);
   let [searchInput, setSearchInput] = useState("");

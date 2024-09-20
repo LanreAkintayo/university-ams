@@ -2,6 +2,7 @@ import dayjs from "dayjs";
 import Litepicker from "litepicker";
 import { LitepickerElement, LitepickerProps } from "./index";
 
+//@ts-ignore
 interface Picker extends Litepicker {
   on?: (
     event: string,

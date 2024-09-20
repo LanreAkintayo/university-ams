@@ -1,4 +1,3 @@
-// import { ethers } from "ethers";
 // import React from "react";
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "./store";

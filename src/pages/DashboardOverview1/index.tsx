@@ -30,13 +30,12 @@ function Main() {
     sliderRef.current?.tns.goTo("next");
   };
 
-
   return (
     <div className="grid grid-cols-12 gap-y-10 gap-x-6">
       <div className="col-span-12">
         <div className="flex flex-col md:h-10 gap-y-3 md:items-center md:flex-row">
           <div className="text-base font-medium group-[.mode--light]:text-white">
-            General Report 
+            General Report
           </div>
           <div className="flex flex-col sm:flex-row gap-x-3 gap-y-2 md:ml-auto">
             <div className="relative">
@@ -186,8 +185,12 @@ function Main() {
                 />
               </div>
               <div className="ml-4">
-                <div className="text-base font-medium">15 Assets Registered</div>
-                <div className="text-slate-500 mt-0.5">Across all divisions</div>
+                <div className="text-base font-medium">
+                  15 Assets Registered
+                </div>
+                <div className="text-slate-500 mt-0.5">
+                  Across all divisions
+                </div>
               </div>
             </div>
             <div className="relative mt-5 mb-6 overflow-hidden">
@@ -239,9 +242,7 @@ function Main() {
                 />
               </div>
               <div className="ml-4">
-                <div className="text-base font-medium">
-                  5 Assets Allocated
-                </div>
+                <div className="text-base font-medium">5 Assets Allocated</div>
                 <div className="text-slate-500 mt-0.5">
                   Across all divisions
                 </div>
@@ -270,7 +271,6 @@ function Main() {
               </div>
             </div>
           </div>
-         
         </div>
       </div>
       <div className="col-span-12">

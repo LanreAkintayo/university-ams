@@ -45,11 +45,10 @@ function Tab({
               selected: selected,
             }}
           >
-            {typeof children === "function"
-              ? children({
+                {typeof children === "function"? children({
                   selected: selected,
-                })
-              : children}
+                  disabled: false
+                }): children}
           </tabContext.Provider>
         </li>
       )}
