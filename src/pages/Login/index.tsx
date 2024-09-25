@@ -18,7 +18,7 @@ function Main() {
   const [password, setPassword] = useState("");
 
   const [isSigning, setIsSigning] = useState(false);
-  const [signText, setSignText] = useState("Sign Up");
+  const [signText, setSignText] = useState("Sign In");
 
   const [allUsers, setAllUsers] = useState<any>()
 

@@ -136,15 +136,9 @@ function Main() {
             href=""
             className="flex items-center transition-[margin] duration-300 group-[.side-menu--collapsed]:xl:ml-2 group-[.side-menu--collapsed.side-menu--on-hover]:xl:ml-0"
           >
-            <div className="flex items-center justify-center w-[34px] rounded-lg h-[34px] bg-gradient-to-r from-theme-1 to-theme-2 transition-transform ease-in-out group-[.side-menu--collapsed.side-menu--on-hover]:xl:-rotate-180">
-              <div className="w-[16px] h-[16px] relative -rotate-45 [&_div]:bg-white">
-                <div className="absolute w-[21%] left-0 inset-y-0 my-auto rounded-full opacity-50 h-[75%]"></div>
-                <div className="absolute w-[21%] inset-0 m-auto h-[120%] rounded-full"></div>
-                <div className="absolute w-[21%] right-0 inset-y-0 my-auto rounded-full opacity-50 h-[75%]"></div>
-              </div>
-            </div>
-            <div className="ml-3.5 group-[.side-menu--collapsed.side-menu--on-hover]:xl:opacity-100 group-[.side-menu--collapsed]:xl:opacity-0 transition-opacity font-medium">
-              RAVAGE
+          <img src={"/unilogo.png"} className="w-[30px]" />
+            <div className="ml-3.5 group-[.side-menu--collapsed.side-menu--on-hover]:xl:opacity-100 group-[.side-menu--collapsed]:xl:opacity-0 transition-opacity font-medium text-xs">
+              UNIVERSITY OF IBADAN
             </div>
           </a>
           <a
